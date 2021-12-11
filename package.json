@@ -1,0 +1,36 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel src/index.html -p 5000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bommunagasai/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bommunagasai/portfolio/issues"
+  },
+  "homepage": "https://github.com/bommunagasai/portfolio#readme",
+  "devDependencies": {
+    "@ds.crisp/foundation": "^0.0.1",
+    "@ds.crisp/react-components": "^0.0.1",
+    "@ds.crisp/scss": "^0.0.1",
+    "aos": "^2.3.4",
+    "clsx": "^1.1.1",
+    "parcel-bundler": "^1.12.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-sizes": "^2.0.0",
+    "sass": "^1.45.0"
+  },
+  "dependencies": {
+    "rea": "^0.0.1"
+  }
+}

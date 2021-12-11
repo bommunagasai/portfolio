@@ -1,0 +1,21 @@
+.portfolio-header__container {
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -o-sticky;
+  position: -ms-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: #FFFFFF;
+  // box-shadow: 0 2px 3px 0 rgb(0 0 0 / 18%);
+}
+
+.portfolio-social-links {
+  border: none;
+  text-decoration: none;
+  &:hover {
+    i {
+      color: #5e75fb;
+    }
+  }
+}

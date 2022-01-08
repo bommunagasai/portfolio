@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "parcel src/index.html -p 5000",
     "build": "parcel build src/index.html --public-url ./ --dist-dir ./docs",
-    "post-build": "workbox generateSW"
+    "post-build": "workbox generateSW",
+    "sw-init": "workbox wizard"
   },
   "repository": {
     "type": "git",

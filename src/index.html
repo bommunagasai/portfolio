@@ -3,11 +3,31 @@
   <head>
     <meta charset="UTF-8">
     <title>Portfolio</title>
-    <meta name="title" content="Portfolio">
+    <link rel="manifest" href="../site.webmanifest" />
     <meta name="description" content="Portfolio">
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="author" content="Bommu Naga Sai">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Portfolio">
+    <meta name="theme-color" content="#1f2456">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../public/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../public/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../public/images/favicon-16x16.png"
+    />
     <link href="../public/scss/all.scss" rel="stylesheet">
   </head>
   <body>
@@ -15,5 +35,36 @@
 
     </div>
     <script src="index.js"> </script>
+    
+    <script>
+      const sw = 'sw.js' // it is needed because parcel will not recognize this as a file and not precess in its manner
+      if (navigator && navigator.serviceWorker) {
+        navigator.serviceWorker
+          .register(sw)
+          .then((registration) => {
+            registration.onupdatefound = () => {
+              const installingWorker = registration.installing
+              if (installingWorker == null) {
+                return
+              }
+              installingWorker.onstatechange = () => {
+                if (installingWorker.state === 'installed') {
+                  if (navigator.serviceWorker.controller) {
+                    console.log(
+                      'New content is available and will be used when all ' +
+                        'tabs for this page are closed. See https://bit.ly/CRA-PWA.'
+                    )
+                  } else {
+                    console.log('Content is cached for offline use.')
+                  }
+                }
+              }
+            }
+          })
+          .catch((error) => {
+            console.error('Error during service worker registration:', error)
+          })
+      }
+    </script>
   </body>
 </html>

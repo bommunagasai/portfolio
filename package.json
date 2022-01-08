@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel src/index.html -p 5000"
+    "dev": "parcel src/index.html -p 5000",
+    "build": "parcel build src/index.html --public-url ./ --dist-dir ./docs",
+    "post-build": "workbox generateSW"
   },
   "repository": {
     "type": "git",
@@ -19,9 +20,9 @@
   },
   "homepage": "https://github.com/bommunagasai/portfolio#readme",
   "devDependencies": {
-    "@ds.crisp/foundation": "^0.0.1",
-    "@ds.crisp/react-components": "^0.0.1",
-    "@ds.crisp/scss": "^0.0.1",
+    "@ds.crisp/foundation": "0.2.1",
+    "@ds.crisp/react-components": "0.2.1",
+    "@ds.crisp/scss": "0.2.1",
     "aos": "^2.3.4",
     "clsx": "^1.1.1",
     "parcel-bundler": "^1.12.5",
@@ -31,6 +32,6 @@
     "sass": "^1.45.0"
   },
   "dependencies": {
-    "rea": "^0.0.1"
+    "workbox-cli": "^6.4.2"
   }
 }

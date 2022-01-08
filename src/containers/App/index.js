@@ -10,6 +10,7 @@ import AboutMe from '../../sections/AboutMe'
 import 'aos/dist/aos.css'
 
 const App = ({
+  content,
   isMobile
 }) => {
   useEffect(() => {
@@ -17,10 +18,10 @@ const App = ({
   }, [])
   return (
     <>
-      <Header/>
-      <AboutMe/>
-      <Works/>
-      <Footer/>
+      <Header {...content.header}/>
+      <AboutMe {...content.aboutMe}/>
+      <Works projects={content.projects}/>
+      <Footer text={content.footer}/>
     </>
   )
 }

@@ -2,7 +2,6 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html -p 5000",
     "build": "parcel build src/index.html --public-url ./ --dist-dir ./docs",
@@ -20,18 +19,21 @@
   },
   "homepage": "https://github.com/bommunagasai/portfolio#readme",
   "devDependencies": {
-    "@ds.crisp/foundation": "0.2.1",
-    "@ds.crisp/react-components": "0.2.1",
-    "@ds.crisp/scss": "0.2.1",
+    "@parcel/packager-raw-url": "^2.1.1",
+    "@parcel/transformer-sass": "^2.1.1",
+    "@parcel/transformer-webmanifest": "^2.1.1",
+    "parcel": "^2.1.1"
+  },
+  "dependencies": {
+    "@ds.crisp/foundation": "^0.2.1",
+    "@ds.crisp/react-components": "^0.2.1",
+    "@ds.crisp/scss": "^0.2.1",
     "aos": "^2.3.4",
     "clsx": "^1.1.1",
-    "parcel-bundler": "^1.12.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-sizes": "^2.0.0",
-    "sass": "^1.45.0"
-  },
-  "dependencies": {
+    "sass": "^1.47.0",
     "workbox-cli": "^6.4.2"
   }
 }

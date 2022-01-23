@@ -105,20 +105,8 @@ export const Works = ({ projects = [] }) => {
                   img={v?.img}
                   title={v?.title}
                   description={v?.description}
-                  tags={[
-                    {
-                      theme: "red",
-                      label: "Storybook JS",
-                    },
-                    {
-                      theme: "blue",
-                      label: "React JS",
-                    },
-                    {
-                      theme: "yellow",
-                      label: "Typescript JS",
-                    },
-                  ]}
+                  targetURL={v?.targetURL}
+                  tags={v?.tags}
                 />
               </Animate>
             </Col>
